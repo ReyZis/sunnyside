@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;900&display=swap");
+/* font-family: 'Barlow', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+/* font-family: 'Fraunces', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap");
+/* font-family: 'Cairo', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.banner {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url("./images/desktop/image-header.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.logo {
+    width: 9vw;
+}
+
+.hamburger {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    font-size: 1vw;
+    color: white;
+    align-items: center;
+}
+
+.menu span {
+    font-family: "Barlow", sans-serif;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+
+.contact {
+    font-family: "Fraunces", serif;
+    background-color: white;
+    color: black;
+    padding: 0.8vw 2vw;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.contact:hover {
+    background-color: #ffffff56;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    right: 50px;
+    top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    padding: 30px 0;
+}
+
+.modal span {
+    font-family: "Barlow", sans-serif;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.modal::after {
+    content: "";
+    border-right: 30px solid #ffffff;
+    border-top: 50px solid transparent;
+    top: -50px;
+    right: 0;
+    position: absolute;
+}
+
+.main {
+    font-family: "Fraunces", serif;
+    letter-spacing: 1vw;
+    word-spacing: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 5vw;
+    flex-grow: 1;
+    color: white;
+    font-weight: 900;
+}
+
+.arrow {
+    margin-top: 60px;
+}
+
+.section1,
+.section2,
+.section3 {
+    display: flex;
+}
+
+.content,
+.image {
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffbf8;
+}
+
+.contentContainer {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contentContainer h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 2.5vw;
+    color: #242f40;
+}
+
+.contentContainer p {
+    font-family: "Barlow", sans-serif;
+    line-height: 2em;
+    color: #8c8a98;
+    font-size: 1vw;
+}
+
+.contentContainer button {
+    font-family: "Fraunces", serif;
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    color: #1f232b;
+    font-weight: 900;
+    font-size: 1.2vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.contentContainer button::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.yellow::after {
+    border: 5px solid #fff3bb;
+    background-color: #fff3bb;
+}
+
+.pink::after {
+    border: 5px solid #f9e2da;
+    background-color: #f9e2da;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    flex: 1;
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.textContainer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    color: #0000006e;
+}
+
+.textContainer p {
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+    font-size: 1vw;
+    margin-bottom: 2vw;
+    line-height: 1.6vw;
+    width: 50%;
+    color: #0000006e;
+}
+
+.testimonials {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fffbf8;
+}
+
+.testimonials > h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 1.3vw;
+    color: #0000006e;
+    letter-spacing: 0.4vw;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.card img {
+    width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+.card p {
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    color: #5d6164;
+    line-height: 2vw;
+    font-size: 1vw;
+    margin-bottom: 50px;
+}
+
+.card h2 {
+    font-family: "Fraunces", serif;
+    font-size: 1.5vw;
+    color: #1f232b;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.card span {
+    font-family: "Barlow", sans-serif;
+    color: #0000006e;
+    font-size: 1vw;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 0 0 0;
+}
+
+.gallery,
+.gallery div {
+    display: flex;
+}
+
+.gallery img {
+    width: 50%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vw;
+    padding: 5vw 0;
+    background-color: #90d4c5;
+}
+
+.info h1 {
+    font-family: "Cairo", sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    letter-spacing: -2px;
+    color: #2c7564;
+}
+
+.footerMenu {
+    margin-bottom: 5vw;
+}
+
+.footerMenu span {
+    font-family: "Barlow", sans-serif;
+    font-size: 1vw;
+    color: #509485;
+    margin: 0 2vw;
+}
+
+.socials img {
+    margin: 0 1vw;
+}
+
+@media (max-width: 575.98px) {
+    .logo {
+        width: 20vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        font-size: 1vw;
+        color: white;
+        align-items: center;
+    }
+
+    .contact {
+        background-color: #fbd601;
+        padding: 3vw 5vw;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+    }
+
+    .modalContact:hover {
+        background-color: #fbd60156;
+    }
+
+    .section1 {
+        flex-direction: column-reverse;
+    }
+
+    .section2,
+    .section3 {
+        flex-direction: column;
+    }
+
+    .content {
+        flex: none;
+        height: 100vw;
+    }
+
+    .contentContainer h1 {
+        font-size: 5vw;
+    }
+
+    .contentContainer p {
+        font-size: 3vw;
+    }
+
+    .contentContainer button {
+        font-size: 3vw;
+    }
+
+    .textContainer {
+        bottom: 0;
+        width: 100%;
+    }
+
+    .textContainer h1 {
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+    .textContainer p {
+        font-size: 2vw;
+        line-height: 4vw;
+        margin-bottom: 5vw;
+    }
+
+    .testimonials {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .testimonials > h2 {
+        font-size: 3vw;
+        margin-bottom: 50px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100vw;
+        margin-bottom: 50px;
+    }
+
+    .card img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .card p {
+        width: 70%;
+        line-height: 4vw;
+        font-size: 3vw;
+    }
+
+    .card h2 {
+        font-size: 3vw;
+    }
+
+    .card span {
+        font-size: 2vw;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        height: 50vw;
+        object-fit: cover;
+    }
+
+    .info {
+        height: auto;
+    }
+
+    .footerMenu {
+        margin-bottom: 15vw;
+    }
+
+    .footerMenu span {
+        font-size: 3vw;
+        margin: 0 5vw;
+    }
+}
