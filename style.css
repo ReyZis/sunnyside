@@ -35,7 +35,7 @@
 }
 
 .logo {
-    width: 9vw;
+    width: 6em;
 }
 
 .hamburger {
@@ -44,7 +44,7 @@
 
 .menu {
     display: flex;
-    font-size: 1vw;
+    font-size: 1em;
     color: white;
     align-items: center;
 }
